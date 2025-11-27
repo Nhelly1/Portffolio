@@ -1,0 +1,195 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: blue;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: blue;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background: blue;
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.profile-pic {
+  text-align: center;
+}
+
+.profile-pic img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: red;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.btn.white {
+  background: blue;
+  color: #333;
+  border: 2px solid blue;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: blue;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.certificate-item {
+  background: blue;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.certificate-item img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.certificate-item p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.btn.resume-btn {
+  background: blue;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn.resume-btn:hover {
+  background: red;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  background: blue;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+

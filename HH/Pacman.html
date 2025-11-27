@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #pacmanCanvas {
+            display: block;
+            background-color: #000000;
+            
+           
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div id="canvas-container" class="w-full max-w-lg mx-auto flex flex-col items-center">
+        <canvas id="pacmanCanvas" width="400" height="400" class="w-full h-auto max-w-xs sm:max-w-sm lg:max-w-md"></canvas>
+      
+
+    <script>
+        // Define colors
+        const COLORS = {
+            YELLOW: '#FFCC00', // Pac-Man Yellow
+            BLACK: '#000000',
+        };
+
+        const canvas = document.getElementById('pacmanCanvas');
+        const ctx = canvas.getContext('2d');
+        function drawPacMan(ctx, size, mouthAngle = Math.PI * 0.2) {
+            // Center of the canvas
+            const CX = size / 2;
+            const CY = size / 2;
+            // Radius of Pac-Man
+            const R = size * 0.45;
+
+            // Clear the canvas (re-fill black if necessary, though body style handles it)
+            ctx.clearRect(0, 0, size, size);
+
+            // --- Draw Pac-Man ---
+            ctx.beginPath();
+            
+            // Define the start and end angles for the arc
+            // We want the mouth to open to the right (0 or 2 * PI radians)
+            const startAngle = mouthAngle / 2;
+            const endAngle = Math.PI * 2 - startAngle;
+
+            // 1. Move to the center to close the mouth (pie slice shape)
+            ctx.moveTo(CX, CY); 
+
+            // 2. Draw the arc (counter-clockwise movement from the perspective of the drawing)
+            ctx.arc(
+                CX, CY, 
+                R, 
+                startAngle, 
+                endAngle, 
+                false // Clockwise direction to draw the full body
+            );
+
+           
+            ctx.closePath(); 
+            
+           
+            ctx.fillStyle = COLORS.YELLOW;
+            ctx.fill();
+
+            
+            ctx.strokeStyle = COLORS.BLACK;
+            ctx.lineWidth = 1;
+            ctx.stroke(); 
+        }
+
+        
+        function initializeCanvas() {
+            const container = document.getElementById('canvas-container');
+            const containerWidth = container.clientWidth;
+           
+            const canvasSize = Math.min(400, containerWidth - 40);
+            canvas.width = canvasSize;
+            canvas.height = canvasSize;
+
+            
+            drawPacMan(ctx, canvasSize);
+        }
+
+        window.onload = initializeCanvas;
+        
+        window.addEventListener('resize', initializeCanvas);
+
+    </script>
+</body>
+</html>

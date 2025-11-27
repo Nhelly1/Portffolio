@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ednel Bartolome - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body id="top">
+
+  
+  <nav class="navbar">
+    <div class="logo">PORTFOLIO</div>
+    <ul class="nav-links">
+      <li><a href="#about">ABOUT ME</a></li>
+      <li><a href="#gallery">GALLERY</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+ 
+  <section id="about" class="hero-section fade-in">
+    <div class="hero-left">
+      <div class="profile-pic">
+        <img src="Ednel.jpg" alt="Ednel Bartolome" />
+        <h3>Ednel B. Bartolome</h3>
+       <div class="social-icons">
+  <a href="https://facebook.com/lostttt1" target="_blank"><i class="ri-facebook-fill"></i></a>
+  <a href="https://twitter.com/Nhellyyyy_" target="_blank"><i class="ri-twitter-fill"></i></a>
+  <a href="https://instagram.com/nhellyyyy_/" target="_blank"><i class="ri-instagram-line"></i></a>
+ 
+</div>
+
+      </div>
+    </div>
+    <div class="hero-right">
+      <h1>Hello </h1>
+      <h2>Here's who I am & what I do</h2>
+      <p>I'm a third-year BSIT student at San Sebastian College Recoletos de Cavite. I enjoy building websites and mobile apps, solving coding problems, and learning how technology shapes the world around us. Whether it's designing a clean layout or debugging tricky errors, I love turning ideas into working projects and growing with every challenge.</p>
+      <a href="resume.html" class="btn resume-btn">RESUME</a>
+      <a href="#certificate" class="btn white">CERTIFICATE</a>
+      
+
+    </div>
+  </section>
+
+
+<section id="certificate" class="certificate-section fade-in">
+  <h2>Certificates</h2>
+  <p>Here are some of my achievements and certifications:</p>
+
+  <div class="certificates-grid">
+    <div class="certificate-item">
+      <img src="Saylor1.jpg" alt="Certificate 1" />
+      <p>BUS200</p>
+    </div>
+    <div class="certificate-item">
+      <img src="Saylor2.jpg" alt="Certificate 2" />
+      <p>CS202</p>
+    </div>
+    <div class="certificate-item">
+      <img src="Saylor3.jpg" alt="Certificate 3" />
+      <p>PRDV104</p>
+    </div>
+    <div class="certificate-item">
+      <img src="Saylor4.jpg" alt="Certificate 4" />
+      <p>MA121</p>
+    </div>
+
+ <div class="certificate-item">
+      <img src="Saylor5.jpg" alt="Certificate 5" />
+      <p>PRDV088</p>
+    </div>
+   
+  
+  </div>
+</section>
+
+
+  
+  <section id="Gallery" class="fade-in">
+  <h2>Gallery</h2>
+  <p>Here are some snapshots of my journey</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="GradHS.jpg" alt="Photo 1" />
+      <p>Highschool Feps</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Brothers.jpg" alt="Photo 2" />
+      <p>Bro</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Dubai Mall.jpg" alt="Photo 3" />
+      <p>Mall</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Dubai.jpg" alt="Photo 4" />
+      <p>Home</p>
+    </div>
+    <div class="gallery-item">
+      <img src="OG.jpg" alt="Photo 5" />
+      <p>213</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Papa.jpg" alt="Photo 6" />
+      <p>Bonding</p>
+    </div>
+    <div class="gallery-item">
+      <img src="HSFriends.jpg" alt="Photo 7" />
+      <p>2010</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Barrera.jpg" alt="Photo 8" />
+      <p>Barrera</p>
+    </div>
+    <div class="gallery-item">
+      <img src="G.jpg" alt="Photo 9" />
+      <p>Niece</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Bartolome.jpg" alt="Photo 10" />
+      <p>Bartolome</p>
+    </div>
+    <div class="gallery-item">
+      <img src="Fam.jpg" alt="Photo 11" />
+      <p>heart</p>
+    </div>
+  </div>
+</section>
+
+    
+  </section>
+
+  
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <p>Call: 09770325949</p>
+    <p>Email: s.ednel.bartolome@sscr.edu</p>
+       <div class="social-icons">
+  <a href="https://facebook.com/lostttt1" target="_blank"><i class="ri-facebook-fill"></i></a>
+  <a href="https://twitter.com/Nhellyyyy_" target="_blank"><i class="ri-twitter-fill"></i></a>
+  <a href="https://instagram.com/nhellyyyy_/" target="_blank"><i class="ri-instagram-line"></i></a>
+ 
+       </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 EDNEL BARTOLOME</p>
+  </footer>
+
+  
+  <script>
+    const animatedElements = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    animatedElements.forEach(el => appearOnScroll.observe(el));
+  </script>
+
+
+</body>
+</html>
